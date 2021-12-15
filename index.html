@@ -56,26 +56,28 @@
     <div class="modalOverlay"></div>
     <div class="modalContent">
       <img src="https://lp1.empiricus.com.br/assets/svgs-default/iconFechar.svg" alt="Fechar" class="btnFechar hiddenModal">
-      <p class="titleForm"><b>Digite seu e-mail abaixo</b> e prepare-se para uma <b>IMERSÃO</b> de conteúdo com o copywriter mais bem pago do Brasil:</p>
+      <p class="titleForm"><b>Ingrese su mejor correo electrónico abajo</b> para participar en el evento:</p>
       <!-- FORMULÁRIO MODAL -->
       <form accept-charset="UTF-8" action="//ws.copycamp.com.br/subscribe" method="post" name="SimpleSignUp" class="briteform simpleForm" data-name-category="" _lpchecked="1">
+        <input type="email" name="emailAddress" class="input-email input iconEmail" placeholder="Ingrese su correo electrónico aquí" autocomplete="on">
 
-        <input type="email" name="emailAddress" class="input-email input iconEmail" placeholder="Digite aqui seu e-mail" autocomplete="on">
-
-        <div class="boxNameCel">
+        <!-- <div class="boxNameCel">
           <fieldset class="fieldset field-email">
             <input type="text" class="input" name="name" placeholder="Nome (opcional)">
           </fieldset>
           <fieldset class="fieldset field-phone">
             <input type="tel" class="input mask tel phone_mask" name="celular" placeholder="Celular (opcional)">
           </fieldset>
-        </div>
+        </div> -->
+        <br>
 
         <input type="checkbox" name="check" class="checkAs">
 
-        <span title="Clique para Assistir" class="input-submit btn-submit">Clique para Assistir</span>
+        <span title="Clique para Assistir" class="input-submit btn-submit">Pulsa aquí para Continuar ></span>
 
-        <p class="infoSubmit"><strong>*Importante:</strong> O endereço de e-mail informado deve ser válido para que você possa acessar imediatamente a publicação em sua caixa de entrada.</p>
+        <p class="infoSubmit">Al hacer clic en el botón, acepta nuestros <a href="https://www.empiricus.com.br/termos-de-uso/" target="_blank">Terminos de Uso</a> y <a href="https://www.empiricus.com.br/politica-de-privacidade/" target="_blank">Política de Privacidad</a>,
+          incluiso la utilización de cookies y envio de comunicaciones.</p>
+
 
         <input name="sourceId" type="hidden" value="XE-MELH-WE-EHLCOC02-X-X-LP-X-X">
         <input name="listCode" type="hidden" value="EHL_COC02">
@@ -95,21 +97,9 @@
         <img src="img/MVEL-ART-MIN.webp" alt="" class="imgCampaign desktop showModal">
         <div class="contentInfo">
 
-          <p class="supportTextColor">Después de generar más de <br><b class="highlight">US$ 509,230.00</b> para mí y para mís clientes, yo Brian Ramirez voy enseñar te a</span>…</p>
+          <p class="supportTextColor">Después de generar más de <br><b class="highlight">US$ 509,230.00</b> para mí y para mís clientes en el 2021, yo Brian Ramirez, te enseñaré como…</p>
           <h2 class="supportTextColor"><b>Apalancar tu empresa o crear un negócio desde cero, a través de <span class="highlight">algoritmos de ventas en línea</span>.</b></h2>
           <p class="supportTextColor">Conocerás <u class="showModal">la estrategia</u> que convertió mí computadora en <b><span class="noWrap">una máquina de ventas.</span> </b></p>
-
-          <div class="countdown-tab" style="display: none;">
-            <div class="countdown">
-              <div class="counter-sec">
-                <div class="countdown-counter half-width text-center">
-                  <div class="timer">
-                    <div class="countdown styled"><div class="countdown-amount">00 <span class="countdown-period">Dias</span></div><div class="countdown-amount">00 <span class="countdown-period">Horas</span></div><div class="countdown-amount">00 <span class="countdown-period">Minutos</span></div><div class="countdown-amount">00 <span class="countdown-period">Segundos</span></div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <p class="supportTextColor">Evento online y <b>sin costo</b>, del <b><span class="highlight noWrap">23 al 26 de Enero</span></b>.</p>
 
@@ -120,7 +110,23 @@
   </header>
   <!-- /STHEADER -->
 
+  <div class="blocks" style="display: none;">
+    <div class="container">
 
+      <div class="countdown-tab" >
+        <div class="countdown">
+          <div class="counter-sec">
+            <div class="countdown-counter half-width text-center">
+              <div class="timer">
+                <div class="countdown styled"><div class="countdown-amount">00 <span class="countdown-period">Dias</span></div><div class="countdown-amount">00 <span class="countdown-period">Horas</span></div><div class="countdown-amount">00 <span class="countdown-period">Minutos</span></div><div class="countdown-amount">00 <span class="countdown-period">Segundos</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <div class="boxFloatButton">
     <span class="btOpenForm showModal">Clic aquí para participar</span>
@@ -132,20 +138,7 @@
 
   <script src="https://lp1.empiricus.com.br/assets/js/jquery-latest.min.js"></script>
   <script src="https://lp1.empiricus.com.br/assets/js/briteform.js"></script>
-
-  <!-- <script type="text/javascript">
-  var arrayTYP = [
-    'http://typ.empiricus.com.br/cadastro-confirmado-coc04-a/',
-    'http://typ.empiricus.com.br/cadastro-confirmado-coc04-b/',
-  ];
-
-  var randomLink = Math.floor(Math.random()*arrayTYP.length);
-  console.log(randomLink);
-
-  if(randomLink == 1) $('input[name="email_page"]').val('emp_welcome_ehlcoc04_whats');
-
-  $('input[name="redirect"]').val(arrayTYP[randomLink]);
-  </script> -->
+  <script src="https://lp1.empiricus.com.br/assets/js/modal.js"></script>
 
   <script src="https://lp1.empiricus.com.br/copy-camp-coc04-d/js/modalForm.js"></script>
   <script src="https://lp1.empiricus.com.br/copy-camp-coc04-d/js/ajax-briteform.js"></script>
@@ -159,7 +152,6 @@
   <!-- interactions -->
   <script src="https://lp1.empiricus.com.br/copy-camp-coc04-d/js/interactions.js"></script>
 
-  <iframe height="0" width="0" style="display: none; visibility: hidden;" src="./Copy Camp - d_files/activityi.html"></iframe>
 
 
 </body>

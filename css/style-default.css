@@ -472,7 +472,8 @@ form .iCheckbox:checked + .fakeInputCheck{
   max-width: 600px;
   color: #aaa;
   text-align: center;
-  font-size: 1em;
+  font-size: .75em;
+  margin-top: 10px;
 }
 /*-----------/FORMULÃƒÂRIO SIMPLES-----------*/
 
@@ -494,3 +495,14 @@ form .iCheckbox:checked + .fakeInputCheck{
 /* @media only screen and (min-width: 1000px){
   .btOpenForm{margin: 30px auto 0;}
 } */
+
+
+*:focus {
+    outline: none;
+}
+input:focus {
+    outline-width: 0;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
