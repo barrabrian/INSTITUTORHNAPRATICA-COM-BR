@@ -1,0 +1,509 @@
+* {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+/*----------TARJA-DE-ALERTA-INICIAL---------*/
+.targe{
+  width: 100%;
+  background: #000;
+  padding: 10px;
+}
+
+.targe p{
+  font-size: 0.7em;
+  line-height: 0.9rem;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+/*----------/TARJA-DE-ALERTA-INICIAL---------*/
+
+/*------------------MODAL------------------*/
+.showModal{cursor: pointer;}
+
+.modal{
+  width: 100%;
+  height: 0;
+  position: fixed;
+  z-index: 10000000;
+  visibility: hidden;
+}
+
+.modalOverlay {
+  background-color: rgba(0, 0, 0, .8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modalContent{
+  width: 90vw;
+  max-width: 480px;
+  height: auto;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.modal .modalContent .titleForm{
+  color: #333;
+  font-size: 1.4em;
+  line-height: normal;
+  margin: 20px 0;
+}
+
+.modal .modalContent form{width: 100%;}
+
+.modal .modalContent form input{
+  width: 100%;
+  height: auto;
+  font-size: 1.4em;
+  font-family: inherit;
+  font-weight: var(--fwNormal);
+  padding: 12px;
+  box-sizing: border-box;
+  color: #333;
+  background: rgba(0, 0, 0, 0.0);
+  background-repeat: no-repeat;
+  background-size: 22px auto;
+  background-position: 0px;
+  border-bottom: 0.5px solid #333;
+  margin: 0 8px 0 0;
+  display: block;
+}
+
+.modal .modalContent form fieldset input{
+  padding: 12px 12px 12px 0;
+}
+
+.modal .modalContent .iconEmail{
+  background-image: url(https://lp1.empiricus.com.br/assets/svgs-default/email-black.svg);
+  padding: 12px 12px 12px 30px;
+}
+
+.modal .modalContent form p{
+  color: #000;
+}
+
+.btnFechar{
+  width: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.checkAs{
+  position: absolute;
+  top: -10000px;
+}
+
+form .flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+form .boxOptin{
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+form .iCheckbox{
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+}
+
+form .fakeInputCheck{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: solid 1px #000;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+}
+
+form .iCheckbox:checked + .fakeInputCheck{
+  background-image: url(https://lp1.empiricus.com.br/assets/svgs-default/check.svg);
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-size: 14px;
+}
+
+.simpleForm .flex .infoSubmit{
+  width: calc(100% - 40px);
+  max-width: 600px;
+  color: #aaa;
+  text-align: left;
+  font-size: 0.85em;
+}
+
+/*-----------LABEL-----------*/
+.simpleForm .labeled_input_group label{
+  display: none;
+  position: absolute;
+  font-size: 12px;
+}
+
+.labeled_input_group.hasValue label{display: block;}
+
+.labeled_input_group.hasValue input{padding-top: 14px;}
+/*-----------/LABEL-----------*/
+/*------------------/MODAL------------------*/
+
+/*-------------CLASSES PONTUAIS-------------*/
+.noWrap{white-space: nowrap;}
+
+.highlight, .highlight-2, .highlight-3{font-family: inherit;}
+.highlight{color: var(--mainColor);}
+.highlight-2{color: var(--secundaryColor);}
+.highlight-3{background: var(--thirdColor);}
+
+.center{text-align: center;}
+
+.hidden{display: none !important;}
+
+.link{
+  color: #0091ff;
+  text-decoration: none;
+}
+
+/* .link::after{
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0091ff;
+  transform: scale(0,0);
+  transition: .2s all linear;
+  cursor: pointer;
+}
+
+.link:hover::after{
+  transform: scale(1,1);
+} */
+/*-------------/CLASSES PONTUAIS-------------*/
+
+
+/*------------------SETA------------------*/
+.boxArrowDown{
+  width: 100%;
+  height: 40px;
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+}
+
+.arrowDown{
+  height: 25px;
+  position: relative;
+  top: 10px;
+  z-index: 1000;
+
+  -webkit-animation: arrowDown 1s infinite linear;
+  animation: arrowDown 1s infinite linear;
+  animation-delay: -2s;
+}
+
+@-webkit-keyframes arrowDown {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+    }
+}
+
+@keyframes arrowDown {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
+/*------------------/SETA------------------*/
+
+/*------------------NAV DE FACEBOOK------------------*/
+.boxNav{
+  width: 100%;
+  margin: 0 auto;
+  background: #000;
+  border-bottom: solid 1px #333;
+}
+
+.boxNav .container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxNav .container a{
+  flex-grow: 0;
+  padding: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1em;
+  color: #fff;
+}
+
+.boxNav .container a:hover{color: var(--mainColor);}
+/*------------------/NAV DE FACEBOOK------------------*/
+
+@media only screen and (min-width: 768px){
+  .modal .modalContent{padding: 25px;}
+}
+
+@media only screen and (min-width: 1000px){
+  .targe p{font-size: 0.9em;}
+}
+
+
+
+/* ----------------------------------------------- */
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Roboto+Condensed:300,300i,400,400i,700,700i&display=swap');
+
+:root {
+  --mainColor: #E9E969;
+  --secundaryColor: #E9E969;
+  --btnsColor: #faff00;
+  --space: 0 auto 20px;
+  --fwBolder: 700;
+  --fwNormal: 300;
+}
+
+
+.boxInfos{
+  width: 100%;
+  display: table;
+  color: #fff;
+}
+
+
+.boxFloatButton{
+  width: 100%;
+  padding: 12.5px;
+  margin: 0 auto;
+  background: #191919;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999
+}
+
+/* .btnDesk{display: none !important;} */
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/*-----------FORMULÃƒÂRIO SIMPLES-----------*/
+.boxForm{
+  width: 100%;
+  max-width: 600px;
+}
+
+.simpleForm{
+  width: 100%;
+  margin: 0px auto;
+}
+
+.simpleForm input:focus{
+  outline-offset: 0;
+  outline: -webkit-focus-ring-color auto 0px;
+  /* background: none; */
+}
+
+.simpleForm input:-webkit-autofill{
+  /* color: #fff !important; */
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
+  background-image: url(https://lp1.empiricus.com.br/assets/svgs-default/email-black.svg);
+}
+
+.simpleForm .iconEmail::after{
+  content: "";
+  width: 100%;
+  height: calc(100% - 4px);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.0);
+  border-bottom: solid 4px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+.simpleForm .input{
+  width: 100%;
+  font-size: 1.2em;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: var(--fwNormal);
+  padding: 12px 12px 12px 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.0);
+  background-repeat: no-repeat;
+  background-size: 22px auto;
+  background-position: 0px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  display: block;
+  position: relative;
+}
+
+.simpleForm .input::placeholder{font-size: .9em;}
+
+.simpleForm .boxNameCel{
+  width: 100%;
+  height: auto;
+  margin: 7px 0 0 0;
+  display: table;
+}
+
+.simpleForm fieldset{
+  width: 50%;
+  border: 0;
+  margin: 0 0 15px;
+  display: table;
+  float: left;
+}
+
+.simpleForm .fieldsetEmail{width: 100%;}
+.simpleForm fieldset:first-child{padding: 0 10px 0 0;}
+.simpleForm fieldset:last-child{padding: 0 0 0 10px;}
+.simpleForm fieldset .input{padding: 12px 12px 12px 0;}
+
+.simpleForm .btn-submit{
+  width: 100%;
+  max-width: 440px;
+  font-size: 1.45em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: var(--fwBolder);
+  line-height: 1.15em;
+  position: relative;
+  padding: 22px 16px 26px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.75);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 20%, rgba(0,0,0, 0) 80%);
+  background-color: var(--btnsColor);
+  cursor: pointer;
+  border-radius: 4px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: block;
+}
+
+/* .btOpenForm img{
+  width: 20px;
+  height: auto;
+  margin-right: 15px;
+  position: relative;
+  transform: translateY(10%);
+} */
+
+.simpleForm .btn-submit{margin: 0 auto 10px;}
+
+.simpleForm .btn-submit:after, .btOpenForm:after{
+  content: "";
+  width: 100%;
+  height: calc(100% - 4px);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.0);
+  border-bottom: solid 4px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+.simpleForm .btn-submit:hover, .btOpenForm:hover{
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.2) 10%, rgba(0,0,0, 0) 90%);
+  background-color: var(--btnsColor);
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+
+.simpleForm .infoSubmit{
+  width: 100%;
+  max-width: 600px;
+  color: #aaa;
+  text-align: center;
+  font-size: .75em;
+  margin-top: 10px;
+}
+/*-----------/FORMULÃƒÂRIO SIMPLES-----------*/
+
+/*-----------LABEL-----------*/
+.simpleForm label{
+  display: none;
+  position: absolute;
+  font-size: 12px;
+}
+
+.labeled_input_group.hasValue label{display: block;}
+
+.labeled_input_group.hasValue input{
+  padding-top: 14px;
+  font-size: 1.2em;
+}
+/*-----------/LABEL-----------*/
+
+/* @media only screen and (min-width: 1000px){
+  .btOpenForm{margin: 30px auto 0;}
+} */
+
+
+*:focus {
+    outline: none;
+}
+input:focus {
+    outline-width: 0;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
